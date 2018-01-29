@@ -1,0 +1,40 @@
+<!doctype html>
+<link rel="stylesheet" href="index.css">
+
+<body ng-app="cc" ng-controller="IndexCtrl as $ctrl">
+  <header>
+    <p></p>
+  </header>
+  <main>
+    <div>
+      <p>From</p>
+      <div>
+        <select ng-model="$ctrl.sourceCase" ng-change="$ctrl.onChange()">
+          <option value="AUTO">Auto</option>
+          <option value="NORMAL">Normal case</option>
+          <option value="CAMEL_CASE">CamelCase</option>
+          <option value="SNAKE_CASE">snake_case</option>
+          <option value="KEBAB_CASE">kebab-case</option>
+        </select>
+      </div>
+      <textarea ng-model="$ctrl.input" ng-change="$ctrl.onChange()"></textarea>
+    </div>
+    <div>
+      <p>To</p>
+      <div>
+        <select ng-model="$ctrl.targetCase" ng-change="$ctrl.onChange()">
+          <option value="NORMAL">Normal case</option>
+          <option value="CAMEL_CASE">CamelCase</option>
+          <option value="SNAKE_CASE">snake_case</option>
+          <option value="KEBAB_CASE">kebab-case</option>
+        </select>
+        <label>
+          <span>Upper case?</span>
+          <input type="checkbox" ng-model="$ctrl.upperCase" ng-change="$ctrl.onChange()">
+        </label>
+      </div>
+      <textarea ng-model="$ctrl.output" disabled></textarea>
+    </div>
+  </main>
+  <script src="dist/bundle.min.js"></script>
+</body>
