@@ -2,14 +2,24 @@ html {
   font: 10pt arial;
 }
 
-main {
-  display: flex;
-  flex-direction: row;
+body {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+body>header {
+  flex: 0;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
 }
 
 main>div {

@@ -6,7 +6,7 @@ const templates = require('../dist/templates');
 class IndexCtrl {
   constructor() {
     /** @type {string} */
-    this.input = '';
+    this.input = `normal case\ncamelCase\nsnake_case\nkebab-case\nor a-mixture_ofCases`;
     /** @type {Case} */
     this.sourceCase = 'AUTO';
     /** @type {boolean} */
@@ -15,6 +15,8 @@ class IndexCtrl {
     this.targetCase = 'CAMEL_CASE';
     /** @type {string} */
     this.output = '';
+
+    this.onChange();
   }
 
   onChange() {
